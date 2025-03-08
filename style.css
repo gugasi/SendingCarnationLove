@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates");
+html {
+  height: 200vh;
+  background: radial-gradient(ellipse at center, #ffb6c1 0%, #ffdab9 50%, #f8a5c2 100%);
+  cursor: pointer;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  border-bottom: 10vh #339545 solid;
+  box-sizing: border-box;
+  position: relative;
+}
+h1 {
+  text-align: center;
+  color: #333333; /* Dark gray color for better contrast */
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 25px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 0vh;
+  transform: translate(0, 100vh);
+  -webkit-animation: move 1s 2.5s forwards;
+          animation: move 1s 2.5s forwards;
+}
+
+
+@keyframes move {
+  0% {
+    transform: translate(0, 100vh);
+  }
+  100% {
+    transform: translate(0vh, 0);
+  }
+}
+
+/* Keeping other styles unchanged */
+.carnation {
+  width: 60vmin;
+  height: 60vmin;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+
+.carnation__leaf--left, .carnation__leaf--right {
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  position: absolute;
+  background: #6f8e4b;
+  top: 70%;
+  left: 45%;
+  transform: translate(-100%, -50%) rotate(-20deg);
+  animation: carnation__leaf 1s forwards;
+}
+
+.carnation__leaf--right {
+  top: 80%;
+  left: 55%;
+  transform: translate(0%, -50%) rotate(-70deg);
+}
+
+@keyframes carnation__leaf {
+  0% { width: 0%; border: 0px solid black; }
+  100% { width: 20%; border: 2px solid black; }
+}
+
+.carnation__stem {
+  position: absolute;
+  transform: translate(-50%, 0%);
+  width: 5%;
+  height: 60%;
+  background: #556d39;
+  left: 50%;
+  bottom: 0%;
+  border: 2px solid black;
+  animation: carnation__stem 1s forwards;
+}
+
+@keyframes carnation__stem {
+  0% { height: 0; }
+  100% { height: 60%; }
+}
+
+.carnation__center {
+  border-radius: 50%;
+  background-color: #e63946;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  z-index: 2;
+  animation: carnation__center 1s 1s forwards;
+}
+
+@keyframes carnation__center {
+  0% { width: 0%; height: 0%; }
+  100% { width: 25%; height: 25%; }
+}
+
+.carnation__petal {
+  border-radius: 40% 60% 40% 60%;
+  background: #ff4d6d;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  animation: grow-petal 1s forwards;
+}
+
+@keyframes grow-petal {
+  0% { width: 0%; height: 0%; }
+  100% { width: 15%; height: 35%; border: 2px solid black; }
+}
+
+/* Petal placement adjustments */
+.carnation__petal--1 { transform: translate(-50%, -50%) rotate(0deg); }
+.carnation__petal--2 { transform: translate(-50%, -50%) rotate(30deg); }
+.carnation__petal--3 { transform: translate(-50%, -50%) rotate(60deg); }
+.carnation__petal--4 { transform: translate(-50%, -50%) rotate(90deg); }
+.carnation__petal--5 { transform: translate(-50%, -50%) rotate(120deg); }
+.carnation__petal--6 { transform: translate(-50%, -50%) rotate(150deg); }
+.carnation__petal--7 { transform: translate(-50%, -50%) rotate(180deg); }
+.carnation__petal--8 { transform: translate(-50%, -50%) rotate(210deg); }
+.carnation__petal--9 { transform: translate(-50%, -50%) rotate(240deg); }
+.carnation__petal--10 { transform: translate(-50%, -50%) rotate(270deg); }
+.carnation__petal--11 { transform: translate(-50%, -50%) rotate(300deg); }
+.carnation__petal--12 { transform: translate(-50%, -50%) rotate(330deg); }

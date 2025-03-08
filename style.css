@@ -131,3 +131,76 @@ h1 {
 .carnation__petal--10 { transform: translate(-50%, -50%) rotate(270deg); }
 .carnation__petal--11 { transform: translate(-50%, -50%) rotate(300deg); }
 .carnation__petal--12 { transform: translate(-50%, -50%) rotate(330deg); }
+
+.clouds {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.cloud {
+  position: absolute;
+  background: #ffe4e1; /* Light pink color to match the peach warm sky */
+  background: linear-gradient(top, #ffe4e1 5%, #ffd1dc 100%);
+  border-radius: 50%;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+  animation: float 15s linear infinite; /* Adjusted animation duration for quicker movement */
+}
+
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: inherit;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  top: -50%;
+  left: 25%;
+}
+
+.cloud::after {
+  top: -50%;
+  left: -25%;
+}
+
+.cloud:nth-child(1) {
+  width: 200px;
+  height: 60px;
+  top: 20%;
+  left: -200px;
+  animation-delay: 0s;
+}
+
+.cloud:nth-child(2) {
+  width: 300px;
+  height: 90px;
+  top: 50%;
+  left: -300px;
+  animation-delay: 7.5s; /* Adjusted delay to match new animation duration */
+}
+
+.cloud:nth-child(3) {
+  width: 250px;
+  height: 75px;
+  top: 80%;
+  left: -250px;
+  animation-delay: 3.75s; /* Adjusted delay to match new animation duration */
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(110%);
+  }
+}
